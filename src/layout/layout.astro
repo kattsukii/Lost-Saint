@@ -1,0 +1,20 @@
+---
+import BaseHead, { type Props } from "~/components/BaseHead.astro";
+
+import "~/styles/index.css";
+
+const { ...head } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead {...head} />
+	</head>
+	<body>
+		<main id="main" class="flow content-grid">
+			<slot />
+		</main>
+
+	</body>
+</html>

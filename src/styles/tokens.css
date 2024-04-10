@@ -1,0 +1,35 @@
+:root {
+	/* dimensions */
+	--hs-nav-height: 4rem;
+	--hs-page-padding-top: 4rem;
+	--hs-page-padding-bottom: 4rem;
+	--hs-page-padding-side: 2.4rem;
+	--hs-thick-border-width: 0.3rem;
+	--hs-border-radius: 0.4rem;
+	--hs-page-main-width: 80rem;
+	--hs-banner-bottom-height: 0px;
+
+	/* typography */
+	--hs-font:
+		ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+	--hs-text-xs: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+	--hs-text-s: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+	--hs-text-m: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+	--hs-text-l: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+	--hs-text-xl: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+	--hs-text-xxl: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+	--hs-text-xxxl: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+}
+
+@media screen and (min-width: 480px) {
+	:root {
+		--hs-page-padding-side: 3.2rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--hs-page-padding-top: 5rem;
+	}
+}

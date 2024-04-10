@@ -1,3 +1,35 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+	"baseUrl": ".",
+	"paths": {
+		"~/*": ["./src/*"]
+	},
+    /* Base Options: */
+		"allowJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"moduleResolution": "bundler",
+		"moduleDetection": "force",
+		"checkJs": true,
+
+    /* EMIT RULES */
+		"outDir": "build",
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"removeComments": true,
+
+    		/* Strictness */
+		"noUncheckedIndexedAccess": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"useUnknownInCatchVariables": true
+  },
+  "exclude": ["node_modules", "dist", ".vercel", "public"]
 }

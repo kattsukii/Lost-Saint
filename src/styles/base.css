@@ -1,0 +1,171 @@
+/* makes sizing simpler */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+*:focus-visible {
+	outline: 2px solid hsla(var(--sk-theme-1-hsl), 0.6);
+	/* box-shadow: var(--sk-focus-outline); */
+	transition: 0.1s ease;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+	scrollbar-width: thin;
+}
+
+/* dark mode user-agent-styles */
+/* improves punctuation in supported browsers */
+html {
+	color-scheme: dark light;
+	hanging-punctuation: first last;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* min body height */
+body {
+	font-size: var(--hs-text-s);
+	min-height: 100svh;
+	font-family: var(--hs-font);
+	line-height: 1.6;
+}
+
+/* responsive images/videos */
+picture, svg, video {
+	display: block;
+	max-width: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	font-style: italic;
+}
+
+/*  buttons -------------------------------- */
+button {
+	font-family: inherit;
+	font-size: inherit;
+	/* background-color: transparent; */
+	border: none;
+	outline-color: transparent;
+	color: currentColor;
+	user-select: none;
+	appearance: none;
+}
+
+
+
+/*  links ------------------------------------- */
+a {
+	position: relative;
+	color: var(--sk-theme-1);
+}
+
+a {
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+}
+
+/* Improved heading in supported browsers */
+h1, h2, h3, h4, h5, h6 {
+	text-wrap: balance;
+}
+
+/* improve readability with max-width on paragraphs and lists */
+/* prevent orphans in supported browsers */
+p, li {
+	max-width: var(--p-max-width, 65ch);
+	text-wrap: pretty;
+}
+
+ol, li {
+	list-style: none;
+}
+
+/*	helper styles -------------------------- */
+
+.flow > * + * {
+	margin-top: var(--_flow-spacer, 1em);
+}
+
+/* main utils */
+.content-grid {
+    --padding-inline: 1rem;
+    --content-max-width: 900px;
+    --breakout-max-width: 1200px;
+  
+    --breakout-size: calc(
+      (var(--breakout-max-width) - var(--content-max-width)) / 2
+    );
+  
+    display: grid;
+    grid-template-columns:
+        [full-width-start] minmax(var(--padding-inline), 1fr)
+        [breakout-start] minmax(0, var(--breakout-size))
+        [content-start] min(
+            100% - (var(--padding-inline) * 2),
+            var(--content-max-width)
+        )
+        [content-end]
+        minmax(0, var(--breakout-size)) [breakout-end]
+        minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+  
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+}
+
+.content-grid > .breakout {
+    grid-column: breakout;
+}
+  
+.content-grid > .full-width {
+    grid-column: full-width;
+  
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+
+/* visually hidden, but accessible to assistive tech */
+.visually-hidden {
+	border: 0;
+	clip-path: inset(0 0 0 0);
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+
+/* Smooth scrolling for users that don't prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+	:has(:target) {
+		scroll-behavior: smooth;
+	}
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	:has(:target) {
+		scroll-behavior: auto;
+	}
+
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
