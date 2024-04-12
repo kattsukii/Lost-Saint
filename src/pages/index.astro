@@ -1,5 +1,10 @@
 ---
 import Layout from "~/layout/layout.astro";
+import Project from "../components/Project.astro";
+
+import { getProjects } from "~/lib/projects";
+
+const projects = await getProjects();
 ---
 
 <Layout>
@@ -18,5 +23,8 @@ import Layout from "~/layout/layout.astro";
 		>.
 	</p>
 	<h2>Projects</h2>
+	<section>
+		{projects.map(project => <Project {project} />)}
+	</section>
 
 </Layout>
