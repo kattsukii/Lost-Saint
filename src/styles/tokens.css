@@ -9,6 +9,13 @@
 	--hs-page-main-width: 80rem;
 	--hs-banner-bottom-height: 0px;
 
+	/* stay in but for long */
+	--backdrop: hsl(0 0% 60% / 0.12);
+	--radius: 14;
+	--border: 3;
+	--backup-border: var(--backdrop);
+	--size: 200;
+
 	/* typography */
 	--hs-font:
 		ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
