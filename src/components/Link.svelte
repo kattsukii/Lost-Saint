@@ -12,6 +12,9 @@ export let href: string;
   </a>
   
   <style>
-    /* Define your styles here */
+    a {
+      text-decoration: underline;
+      padding: 0 0 1px;
+    }
   </style>
   

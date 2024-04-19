@@ -2,6 +2,7 @@
 import smartypants from "smartypants";
 import siteInfo from "~/data/site-info";
 import SEO from "./SEO.astro";
+import Favicon from "./Favicon.astro";
 
 export type Props = {
 	title?: string;
@@ -37,7 +38,10 @@ const resolvedImage = {
 <meta name="theme-color" content="#8D46E7" />
 
 <!-- Low Priority Global Metadata -->
+<Favicon />
+<link rel="mask-icon" href="/favicon.svg" color="#8D46E7" />
 <link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
 
 <SEO
 	name={siteInfo.name}

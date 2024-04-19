@@ -1,0 +1,11 @@
+# I, for one, welcome our new robotic overlords
+
+User-agent: *
+Allow: /
+
+Sitemap: https://astro.build/sitemap-index.xml
+
+# Specific directives for GPTBot
+User-agent: GPTBot
+
+Disallow: /

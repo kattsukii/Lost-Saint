@@ -8,6 +8,10 @@ const projects = await getProjects();
 ---
 
 <Layout>
+	<h1 slot="header-content">
+		Lost Saint
+	</h1>
+
 	<p>
 		<small class="text-neutral-500"
 		  >IPA &nbsp; /ˈnɛks ɛl/ — no meaning, i made it up</small
@@ -22,9 +26,17 @@ const projects = await getProjects();
 		  >terminal</strong
 		>.
 	</p>
-	<h2>Projects</h2>
-	<section>
+	<h2 class="">Projects</h2>
+	<section class="">
 		{projects.map(project => <Project {project} />)}
 	</section>
 
 </Layout>
+
+<style>
+	section {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: 1fr 1fr;
+	}
+</style>

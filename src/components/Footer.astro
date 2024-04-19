@@ -1,0 +1,41 @@
+---
+import Link from "./Link.svelte";
+---
+<footer class="primary-footer content-grid">
+        <div class="primary-footer--layout breakout">
+            <span>David</span>
+                <Link href="mailto:sunymon@protonmail.com">
+                    <div class="i-tabler:mail-filled" title="Email" />
+                </Link>
+            
+                <Link href="https://github.com/kattsukii">
+                    <div class="i-mdi:github" title="GitHub" />
+                </Link>
+            
+                <Link href="https://x.com/">
+                    <!-- <div class="i-tabler:brand-x" title="X (formerly known as Twitter)" /> -->
+            
+                    <!-- temp -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <title>X (formerly known as Twitter)</title>
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                        <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                    </svg>
+                </Link>
+        </div>
+</footer>
+
+<style>
+.primary-footer {
+        margin-top: 100px;
+        
+}
+.primary-footer--layout {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid rgb(82, 82, 82);
+        padding-top: 20px;
+}
+</style>

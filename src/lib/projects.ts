@@ -15,5 +15,10 @@ export async function getProjects(): Promise<Project[]> {
 			link: "https://github.com/kattsukii/Lost-Saint",
 			description: "Boring personal site built with Astro",
 		},
+		{
+			repo: "Fabled-Myths",
+			link: "https://github.com/kattsukii/fabled-myths",
+			description: "Novel and Fanfic app",
+		},
 	];
 }
