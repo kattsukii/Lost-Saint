@@ -13,13 +13,13 @@
     "@astrojs/check": "^0.5.10",
     "@astrojs/sitemap": "^3.1.4",
     "@astrojs/svelte": "^5.4.0",
-    "astro": "^4.6.3",
+    "astro": "^4.7.0",
     "svelte": "^4.2.15",
     "typescript": "^5.4.5",
-    "zod": "^3.22.5"
+    "zod": "^3.23.4"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.7.0",
+    "@biomejs/biome": "^1.7.1",
     "@types/node": "^20.12.7",
     "smartypants": "^0.2.2"
   }
