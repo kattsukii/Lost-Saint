@@ -10,17 +10,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.6.0",
+    "@astrojs/check": "^0.7.0",
     "@astrojs/sitemap": "^3.1.4",
     "@astrojs/svelte": "^5.4.0",
-    "astro": "^4.8.0",
-    "svelte": "^4.2.16",
+    "astro": "^4.8.5",
+    "svelte": "^4.2.17",
     "typescript": "^5.4.5",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.7.3",
-    "@types/node": "^20.12.11",
+    "@types/node": "^20.12.12",
     "smartypants": "^0.2.2"
   }
 }
