@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.7.3",
-    "@types/node": "^20.12.12",
+    "@types/node": "^20.13.0",
     "smartypants": "^0.2.2"
   }
 }
